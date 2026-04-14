@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    WebXR.Settings: {fileID: 11400000, guid: 6df72f7a6d0744d47a407e3d27a29a27, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9533df4bc53fb4615ab75f8a9d94591b, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 90d0cf302568448f3ad0855e9e240e01, type: 2}
   m_UseUCBPForAssetBundles: 0

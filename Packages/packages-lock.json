@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.de-panther.webxr": {
+      "version": "0.22.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.13"
+      },
+      "url": "https://package.openupm.com"
+    },
     "com.unity.burst": {
       "version": "1.8.28",
       "depth": 2,
@@ -130,7 +139,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.10",
+      "version": "1.8.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -149,6 +158,46 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.xr.core-utils": {
+      "version": "2.5.3",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.xr": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.legacyinputhelpers": {
+      "version": "2.1.13",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.management": {
+      "version": "4.5.3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.xr": "1.0.0",
+        "com.unity.xr.core-utils": "2.2.1",
+        "com.unity.modules.subsystems": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.11"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.mock-hmd": {
+      "version": "1.5.0-exp.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "4.5.3"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.modules.animation": {
       "version": "1.0.0",
