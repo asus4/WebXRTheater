@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "serve": "node Scripts/serve-unity-webgl.js Build/WebXR 8080"
+    }
+}
