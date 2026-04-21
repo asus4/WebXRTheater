@@ -3,7 +3,12 @@ guid: d87e6074399bd46b7ac3a9a341438028
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CouchMat
+    second: {fileID: 2100000, guid: 62d68880f7b7a4d5e9f440334cfe92ad, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -79,7 +84,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
