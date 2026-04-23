@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace HailMaryXR
+namespace WebXRTheater
 {
     public sealed class ObjectCloner : MonoBehaviour
     {
@@ -16,6 +16,9 @@ namespace HailMaryXR
 
         void Start()
         {
+            Assert.IsNotNull(prefab, "Prefab is not assigned.");
+            Assert.IsNotNull(positions, "Positions array is not assigned.");
+
             if (cloneOnStart)
             {
                 CloneObject();
@@ -24,9 +27,6 @@ namespace HailMaryXR
 
         public void CloneObject()
         {
-            Assert.IsNotNull(prefab, "Prefab is not assigned.");
-            Assert.IsNotNull(positions, "Positions array is not assigned.");
-
             var parent = transform;
             foreach (var position in positions)
             {

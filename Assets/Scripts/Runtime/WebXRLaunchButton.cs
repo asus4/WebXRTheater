@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using WebXR;
 
-namespace HailMaryXR
+namespace WebXRTheater
 {
     /// <summary>
     /// A button that toggles the WebXR mode (VR or AR) when clicked. 
@@ -39,7 +39,8 @@ namespace HailMaryXR
                 {
                     WebXRState.VR => instance.isSupportedVR,
                     WebXRState.AR => instance.isSupportedAR,
-                    _ => false,
+                    WebXRState.NORMAL => true,
+                    _ => throw new System.NotImplementedException($"Unsupported target state: {targetState}")
                 };
             }
         }
@@ -82,7 +83,7 @@ namespace HailMaryXR
 
         void OnButtonClicked()
         {
-            if(!IsSupported)
+            if (!IsSupported)
             {
                 return;
             }
@@ -95,6 +96,11 @@ namespace HailMaryXR
                 case WebXRState.AR:
                     manager.ToggleAR();
                     break;
+                case WebXRState.NORMAL:
+                    // No action needed for NORMAL state
+                    break;
+                default:
+                    throw new System.NotImplementedException($"Unsupported target state: {targetState}");
             }
         }
 
