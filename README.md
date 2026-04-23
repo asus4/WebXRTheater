@@ -12,6 +12,7 @@ npm run serve
 ngrok http 8080
 ```
 
-## License
+## Third Party Licenses
 
 - [De-Panther/unity-webxr-export](https://github.com/De-Panther/unity-webxr-export): Apache License 2.0
+- [Share Tech Mono Font](https://fonts.google.com/specimen/Share+Tech+Mono/license?preview.script=Latn): SIL Open Font License 1.1
