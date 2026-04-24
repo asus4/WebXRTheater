@@ -11,14 +11,9 @@ namespace WebXRTheater
     /// </summary>
     public sealed class MainController : MonoBehaviour
     {
-        [Serializable]
-        public class StateEvent : UnityEvent
-        {
-        }
-
         [Header("State Events")]
-        public StateEvent OnEnterXR;
-        public StateEvent OnEnterTheater;
+        public UnityEvent OnEnterXR;
+        public UnityEvent OnEnterTheater;
 
         [Header("Scene references")]
         [SerializeField]

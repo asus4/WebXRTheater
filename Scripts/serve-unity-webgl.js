@@ -10,8 +10,8 @@
  *   node serve-unity-webgl.js ./Build 8080
  *   node serve-unity-webgl.js .        3000
  *
- * Then expose via ngrok:
- *   ngrok http 8080
+ * Then expose via cloudflared:
+ *   cloudflared tunnel --url http://localhost:8080
  */
 
 const http = require("http");
@@ -54,32 +54,33 @@ const COMPRESSION_MAP = {
   ".br": "br",
   ".gz": "gzip",
 };
+const COMPRESSION_ENTRIES = Object.entries(COMPRESSION_MAP);
 
-function getContentType(filePath) {
-  // .framework.js.br → return MIME for .js
-  // .wasm.br         → return MIME for .wasm
+// e.g. "foo.framework.js.br" → { contentType: "application/javascript", contentEncoding: "br" }
+function resolveFileInfo(filePath) {
   let p = filePath;
-  for (const compExt of Object.keys(COMPRESSION_MAP)) {
-    if (p.endsWith(compExt)) {
-      p = p.slice(0, -compExt.length);
+  let contentEncoding = null;
+  for (const [ext, encoding] of COMPRESSION_ENTRIES) {
+    if (p.endsWith(ext)) {
+      p = p.slice(0, -ext.length);
+      contentEncoding = encoding;
       break;
     }
   }
   const ext = path.extname(p).toLowerCase();
-  return MIME_TYPES[ext] || "application/octet-stream";
-}
-
-function getContentEncoding(filePath) {
-  for (const [ext, encoding] of Object.entries(COMPRESSION_MAP)) {
-    if (filePath.endsWith(ext)) return encoding;
-  }
-  return null;
+  return { contentType: MIME_TYPES[ext] || "application/octet-stream", contentEncoding };
 }
 
 // --- Server ---
 const server = http.createServer((req, res) => {
-  // Extract path from URL (strip query string)
-  let urlPath = decodeURIComponent(req.url.split("?")[0]);
+  let urlPath;
+  try {
+    urlPath = new URL(req.url, "http://localhost").pathname;
+  } catch {
+    res.writeHead(400);
+    res.end("Bad Request");
+    return;
+  }
   if (urlPath === "/") urlPath = "/index.html";
 
   const filePath = path.join(ROOT, urlPath);
@@ -91,19 +92,27 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Check if file exists
-  if (!fs.existsSync(filePath)) {
+  let stat;
+  try {
+    stat = fs.statSync(filePath);
+  } catch (err) {
+    res.writeHead(err.code === "ENOENT" ? 404 : 500);
+    res.end(err.code === "ENOENT" ? "Not Found: " + urlPath : "Internal Server Error");
+    return;
+  }
+
+  if (!stat.isFile()) {
     res.writeHead(404);
     res.end("Not Found: " + urlPath);
     return;
   }
 
-  const contentType = getContentType(filePath);
-  const contentEncoding = getContentEncoding(filePath);
+  const { contentType, contentEncoding } = resolveFileInfo(filePath);
 
   const headers = {
     "Content-Type": contentType,
-    "Access-Control-Allow-Origin": "*",          // CORS
+    "Content-Length": stat.size,
+    "Access-Control-Allow-Origin": "*",
     "Cross-Origin-Opener-Policy": "same-origin", // Required for SharedArrayBuffer
     "Cross-Origin-Embedder-Policy": "require-corp",
   };
@@ -112,11 +121,10 @@ const server = http.createServer((req, res) => {
     headers["Content-Encoding"] = contentEncoding;
   }
 
-  const stat = fs.statSync(filePath);
-  headers["Content-Length"] = stat.size;
-
   res.writeHead(200, headers);
-  fs.createReadStream(filePath).pipe(res);
+  const stream = fs.createReadStream(filePath);
+  stream.on("error", () => res.destroy());
+  stream.pipe(res);
 });
 
 server.listen(PORT, () => {
@@ -131,7 +139,7 @@ server.listen(PORT, () => {
   ║  Gzip   (.gz)  → Content-Encoding: gzip         ║
   ╠══════════════════════════════════════════════════╣
   ║  Next step:                                      ║
-  ║  ngrok http ${String(PORT).padEnd(37)}║
+  ║  cloudflared tunnel --url http://localhost:${String(PORT).padEnd(6)}║
   ╚══════════════════════════════════════════════════╝
   `);
 });
