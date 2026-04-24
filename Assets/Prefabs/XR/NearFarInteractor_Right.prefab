@@ -8,9 +8,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2442306273320644280, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
+      propertyPath: m_UIScrollInput.m_InputActionReference
+      value: 
+      objectReference: {fileID: -6756787485274679044, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    - target: {fileID: 2442306273320644280, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
+      propertyPath: m_SelectInput.m_InputActionReferenceValue
+      value: 
+      objectReference: {fileID: -1758520528963094988, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    - target: {fileID: 2442306273320644280, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
+      propertyPath: m_UIPressInput.m_InputActionReferenceValue
+      value: 
+      objectReference: {fileID: -5908353012961274365, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    - target: {fileID: 2442306273320644280, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
+      propertyPath: m_ActivateInput.m_InputActionReferenceValue
+      value: 
+      objectReference: {fileID: 7904272356298805229, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    - target: {fileID: 2442306273320644280, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
+      propertyPath: m_SelectInput.m_InputActionReferencePerformed
+      value: 
+      objectReference: {fileID: 187161793506945269, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    - target: {fileID: 2442306273320644280, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
+      propertyPath: m_UIPressInput.m_InputActionReferencePerformed
+      value: 
+      objectReference: {fileID: 3279264004350380116, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    - target: {fileID: 2442306273320644280, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
+      propertyPath: m_ActivateInput.m_InputActionReferencePerformed
+      value: 
+      objectReference: {fileID: 83097790271614945, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
     - target: {fileID: 4804964734930210078, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
       propertyPath: m_Name
-      value: NearFarInteractor_Left
+      value: NearFarInteractor_Right
       objectReference: {fileID: 0}
     - target: {fileID: 5745700813747042508, guid: f73405610dacf4ea98c7d85b737425d2, type: 3}
       propertyPath: m_LocalPosition.x

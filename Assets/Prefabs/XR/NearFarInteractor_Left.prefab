@@ -485,8 +485,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 187161793506945269, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
-    m_InputActionReferenceValue: {fileID: -1758520528963094988, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    m_InputActionReferencePerformed: {fileID: -6131295136447488360, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    m_InputActionReferenceValue: {fileID: 6558622148059887818, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -515,8 +515,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 83097790271614945, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
-    m_InputActionReferenceValue: {fileID: 7904272356298805229, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    m_InputActionReferencePerformed: {fileID: -5982496924579745919, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    m_InputActionReferenceValue: {fileID: -4289430672226363583, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -598,8 +598,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 3279264004350380116, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
-    m_InputActionReferenceValue: {fileID: -5908353012961274365, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    m_InputActionReferencePerformed: {fileID: -6395602842196007441, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    m_InputActionReferenceValue: {fileID: 71106601250685021, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -619,7 +619,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -6756787485274679044, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
+    m_InputActionReference: {fileID: 2464016903823916871, guid: d6eb0d7d20fe148048aa87f816679bb9, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
 --- !u!114 &1722882099693224055
