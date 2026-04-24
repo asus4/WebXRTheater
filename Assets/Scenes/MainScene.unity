@@ -1111,7 +1111,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0.01
-  m_MaxParticleSize: 0.2
+  m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -1126,8 +1126,8 @@ ParticleSystemRenderer:
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_UseCustomVertexStreams: 0
-  m_VertexStreams: 00010304
+  m_UseCustomVertexStreams: 1
+  m_VertexStreams: 000103042e0c0a
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
@@ -1154,10 +1154,10 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
-  autoRandomSeed: 1
+  autoRandomSeed: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -1273,8 +1273,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 5
+      minMaxState: 3
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1326,9 +1326,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.298, b: 0, a: 1}
+      minMaxState: 2
+      minColor: {r: 1, g: 0.16443026, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.31739217, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1391,15 +1391,15 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.2
-      minScalar: 0.1
+      minMaxState: 1
+      scalar: 10
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.10737581
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1407,13 +1407,22 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          time: 0.82966685
+          value: 0.21284172
+          inSlope: 0.3455513
+          outSlope: 0.3455513
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
+          outWeight: 0.37602457
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 5.6832514
+          outSlope: 5.6832514
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.037520107
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1444,7 +1453,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 1
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1497,7 +1506,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 1
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1709,7 +1718,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 5000
+    maxNumParticles: 16384
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -1769,7 +1778,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 6
+    type: 5
     angle: 10
     length: 62.45
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1777,10 +1786,10 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 10, y: 10, z: 10}
     placementMode: 2
     m_MeshMaterialIndex: 0
-    m_MeshNormalOffset: -100
+    m_MeshNormalOffset: -10
     m_MeshSpawn:
       mode: 0
       spread: 0
@@ -1853,8 +1862,8 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0.1
-    randomPositionAmount: 15.58
+    sphericalDirectionAmount: 0.15
+    randomPositionAmount: 4.95
     radius:
       value: 14.3
       mode: 0
@@ -2100,7 +2109,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.32730898
+          time: 0.10593501
           value: 1
           inSlope: -0
           outSlope: -0
@@ -2109,8 +2118,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.7548929
-          value: 0.9765235
+          time: 0.6693792
+          value: 1
           inSlope: -0
           outSlope: -0
           tangentMode: 0
@@ -2118,13 +2127,13 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: -3.9670208
-          outSlope: -3.9670208
+          time: 0.99236643
+          value: 0.8069282
+          inSlope: -1.795175
+          outSlope: -1.795175
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.30482846
+          inWeight: 0.11834717
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2433,8 +2442,8 @@ ParticleSystem:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 1}
+        key2: {r: 0, g: 0, b: 0, a: 1}
+        key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -2449,7 +2458,7 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 2529
-        atime2: 61675
+        atime2: 55127
         atime3: 65535
         atime4: 0
         atime5: 0
@@ -3200,7 +3209,7 @@ ParticleSystem:
         m_RotationOrder: 4
     inWorldSpace: 0
   InheritVelocityModule:
-    enabled: 0
+    enabled: 1
     m_Mode: 0
     m_Curve:
       serializedVersion: 2
@@ -5887,13 +5896,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692942833}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 73.6}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1746463688}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1697697031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6382131366576515851, guid: d3fe1c17abedb40d489933d2583e47cc, type: 3}
@@ -5995,6 +6004,18 @@ PrefabInstance:
       propertyPath: m_text
       value: PETROBA
       objectReference: {fileID: 0}
+    - target: {fileID: 4359252915653845411, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359252915653845411, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359252915653845411, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278206719
+      objectReference: {fileID: 0}
     - target: {fileID: 4837180357420276589, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -6027,6 +6048,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Timeline.SignalAsset, Unity.Timeline
       objectReference: {fileID: 0}
+    - target: {fileID: 7806350410520325875, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806350410520325875, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459765879013683359, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4b74877f7fecb443f93fd3067ee47791, type: 2}
     - target: {fileID: 8567813333483052233, guid: 4fa21d33d119f4849aa40f215dc5dc5c, type: 3}
       propertyPath: m_Name
       value: Petrova Button
@@ -6137,6 +6170,7 @@ PlayableDirector:
     value: {fileID: 1105549178}
   m_ExposedReferences:
     m_References:
+    - 3d63c0dfaa88441bb89fccde06798a8d: {fileID: 1692942833}
     - e30c6c483afa246ecac699f82cf7b617: {fileID: 1692942833}
 --- !u!114 &1798573275
 MonoBehaviour:
