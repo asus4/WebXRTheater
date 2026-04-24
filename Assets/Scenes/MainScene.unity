@@ -1146,7 +1146,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692942833}
   serializedVersion: 8
-  lengthInSec: 40
+  lengthInSec: 60
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1221,7 +1221,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1273,7 +1273,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 1
       scalar: 10
       minScalar: 5
       maxCurve:
@@ -1281,21 +1281,30 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: 0.32229772
+          inSlope: 0.13891664
+          outSlope: 0.13891664
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.095701106
+        - serializedVersion: 3
+          time: 0.89993113
+          value: 0.51323617
+          inSlope: 0.7485529
+          outSlope: 0.7485529
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.69717854
         - serializedVersion: 3
           time: 1
           value: 1
-          inSlope: 0
-          outSlope: 0
+          inSlope: 5.6504965
+          outSlope: 5.6504965
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.270946
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -1328,7 +1337,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 2
       minColor: {r: 1, g: 0.16443026, b: 0, a: 1}
-      maxColor: {r: 1, g: 0.31739217, b: 0, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.18196487, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1862,8 +1871,8 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0.15
-    randomPositionAmount: 4.95
+    sphericalDirectionAmount: 0.3
+    randomPositionAmount: 2.69
     radius:
       value: 14.3
       mode: 0
@@ -2102,14 +2111,14 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 0
-          outSlope: 0
+          inSlope: 10.559506
+          outSlope: 10.559506
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.120443374
         - serializedVersion: 3
-          time: 0.10593501
+          time: 0.038949363
           value: 1
           inSlope: -0
           outSlope: -0

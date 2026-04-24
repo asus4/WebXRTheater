@@ -41,6 +41,10 @@ Material:
         m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _BokehLemonCustomFunction_ecbec55c68554053926676eefb6afd82_Texture_3_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 947d92e746eb841eea41cfb9ba30fb8b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -62,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: 947d92e746eb841eea41cfb9ba30fb8b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -107,8 +111,9 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
+    - _ClipSfotness: 0.0077
     - _ColorMode: 1
-    - _ColorMultiplier: 10
+    - _ColorMultiplier: 1.78
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -119,6 +124,7 @@ Material:
     - _DistortionStrengthScaled: 0
     - _DstBlend: 10
     - _DstBlendAlpha: 10
+    - _EdgeFalloff: 0.153
     - _EmissionEnabled: 0
     - _EnvironmentReflections: 1
     - _FlipbookBlending: 0
@@ -126,6 +132,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _LemonStreangth: 0.323
     - _LightingEnabled: 0
     - _Metallic: 0
     - _Mode: 0
@@ -140,6 +147,7 @@ Material:
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 1
+    - _SquashStrength: 0.318
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 1
