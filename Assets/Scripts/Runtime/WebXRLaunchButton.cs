@@ -97,13 +97,12 @@ namespace WebXRTheater
                     manager.ToggleAR();
                     break;
                 case WebXRState.NORMAL:
-                    // No action needed for NORMAL state
+                    SwitchToNormal();
                     break;
                 default:
                     throw new System.NotImplementedException($"Unsupported target state: {targetState}");
             }
         }
-
 
         void SetInactive()
         {
@@ -117,5 +116,20 @@ namespace WebXRTheater
                     break;
             }
         }
+
+        void SwitchToNormal()
+        {
+            var manager = WebXRManager.Instance;
+            switch (manager.XRState)
+            {
+                case WebXRState.VR:
+                    manager.ToggleVR();
+                    break;
+                case WebXRState.AR:
+                    manager.ToggleAR();
+                    break;
+            }
+        }
+
     }
 }

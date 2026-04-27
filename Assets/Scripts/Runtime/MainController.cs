@@ -18,6 +18,8 @@ namespace WebXRTheater
         [Header("Scene references")]
         [SerializeField]
         Button startXrButton;
+        [SerializeField]
+        Button startTheaterButton;
 
         void OnEnable()
         {
@@ -30,6 +32,10 @@ namespace WebXRTheater
             {
                 startXrButton.onClick.AddListener(StartXR);
             }
+            if (startTheaterButton != null)
+            {
+                startTheaterButton.onClick.AddListener(StartTheater);
+            }
         }
 
         void OnDisable()
@@ -38,6 +44,10 @@ namespace WebXRTheater
             if (startXrButton != null)
             {
                 startXrButton.onClick.RemoveListener(StartXR);
+            }
+            if (startTheaterButton != null)
+            {
+                startTheaterButton.onClick.RemoveListener(StartTheater);
             }
         }
 

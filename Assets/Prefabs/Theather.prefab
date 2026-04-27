@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 6382351145668924905}
   - component: {fileID: 6975054202613505094}
   - component: {fileID: 5680315054057280604}
+  - component: {fileID: 4960217919971086317}
   m_Layer: 0
   m_Name: TheaterCamera
   m_TagString: MainCamera
@@ -319,6 +320,22 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &4960217919971086317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5066036410709658730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f75744086d2ae48a88694a3eb2dbadee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WebXRTheater::WebXRTheater.PanCamera
+  pointerPositionAction: {fileID: -1654692200621890270, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  maxPanAngle: 15
+  smoothTime: 0.1
+  initialRotation: {x: -0.06032556, y: 0, z: 0, w: 0.9981788}
 --- !u!1 &6382131366576515851
 GameObject:
   m_ObjectHideFlags: 0
