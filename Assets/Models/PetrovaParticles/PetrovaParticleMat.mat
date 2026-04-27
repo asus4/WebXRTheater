@@ -113,7 +113,7 @@ Material:
     - _ClearCoatSmoothness: 0
     - _ClipSfotness: 0.0077
     - _ColorMode: 1
-    - _ColorMultiplier: 1.78
+    - _ColorMultiplier: 6.2
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
