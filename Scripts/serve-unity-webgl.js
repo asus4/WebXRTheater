@@ -18,11 +18,9 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-// --- Config ---
 const ROOT = path.resolve(process.argv[2] || ".");
 const PORT = parseInt(process.argv[3], 10) || 8080;
 
-// --- MIME Types ---
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
   ".js":   "application/javascript",
@@ -47,31 +45,20 @@ const MIME_TYPES = {
   ".woff2":"font/woff2",
 };
 
-// --- Compression Mapping ---
-// Unity outputs files with .br (Brotli) or .gz (Gzip) extensions.
-// The Content-Encoding header must be set so the browser can decompress them.
 const COMPRESSION_MAP = {
   ".br": "br",
   ".gz": "gzip",
 };
-const COMPRESSION_ENTRIES = Object.entries(COMPRESSION_MAP);
 
-// e.g. "foo.framework.js.br" → { contentType: "application/javascript", contentEncoding: "br" }
 function resolveFileInfo(filePath) {
-  let p = filePath;
-  let contentEncoding = null;
-  for (const [ext, encoding] of COMPRESSION_ENTRIES) {
-    if (p.endsWith(ext)) {
-      p = p.slice(0, -ext.length);
-      contentEncoding = encoding;
-      break;
-    }
-  }
-  const ext = path.extname(p).toLowerCase();
-  return { contentType: MIME_TYPES[ext] || "application/octet-stream", contentEncoding };
+  const outerExt = path.extname(filePath).toLowerCase();
+  const contentEncoding = COMPRESSION_MAP[outerExt] ?? null;
+  const innerExt = contentEncoding
+    ? path.extname(filePath.slice(0, -outerExt.length)).toLowerCase()
+    : outerExt;
+  return { contentType: MIME_TYPES[innerExt] || "application/octet-stream", contentEncoding };
 }
 
-// --- Server ---
 const server = http.createServer((req, res) => {
   let urlPath;
   try {
@@ -86,7 +73,7 @@ const server = http.createServer((req, res) => {
   const filePath = path.join(ROOT, urlPath);
 
   // Prevent directory traversal
-  if (!filePath.startsWith(ROOT)) {
+  if (!filePath.startsWith(ROOT + path.sep)) {
     res.writeHead(403);
     res.end("Forbidden");
     return;
