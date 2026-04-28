@@ -24,7 +24,7 @@ namespace WebXRTheater
         void OnEnable()
         {
             WebXRManager.OnXRChange += OnXRChange;
-            // Sent initial state event
+            // Send initial state event
             var manager = WebXRManager.Instance;
             OnXRChange(manager.XRState, manager.ViewsCount, manager.ViewsLeftRect, manager.ViewsRightRect);
 

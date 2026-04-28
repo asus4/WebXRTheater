@@ -8,7 +8,7 @@ A prototype for a WebXR using Unity.
 # Run the local server which supports Brotli files for Unity WebGL
 npm run serve
 
-# Run cloudflared if you want to test on a device, such as Meta Quest.
+# Run cloudflared or ngrok if you want to test on a device, such as Meta Quest.
 cloudflared tunnel --url http://localhost:8080
 ```
 

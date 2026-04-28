@@ -314,30 +314,6 @@ MonoBehaviour:
   OnEnterXR:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1697697031}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1007525512}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1798573276}
         m_TargetAssemblyTypeName: WebXRTheater.TimelineSignalController, WebXRTheater
         m_MethodName: SendSignalAsset
@@ -350,22 +326,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  OnEnterTheater:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 1697697031}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1007525512}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -377,6 +338,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6009650063654893114}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OnXR
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnEnterTheater:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 1798573276}
         m_TargetAssemblyTypeName: WebXRTheater.TimelineSignalController, WebXRTheater
         m_MethodName: SendSignalAsset
@@ -389,8 +365,95 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1697697031}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6009650063654893114}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OnTheater
+          m_BoolArgument: 0
+        m_CallState: 2
   startXrButton: {fileID: 335312110}
   startTheaterButton: {fileID: 1785148188}
+--- !u!1 &671769917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671769918}
+  - component: {fileID: 671769919}
+  m_Layer: 0
+  m_Name: XRSimulatedDevice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671769918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671769917}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 937443472}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671769919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671769917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f67bca1012e415c8f17e7a379b5933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: WebXRTheater::WebXRTheater.XRInputSimulator
+  pointerPositionAction:
+    m_Name: Pointer Position
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6294cdcd-5aba-4925-a444-43c599297537
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 91b4feac-b4be-4e60-854e-b43328ad7c5b
+      m_Path: <Pointer>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pointer Position
+      m_Flags: 0
+    m_Flags: 0
+  maxPanAngle: 20
+  initialRotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!1 &695622104
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,15 +550,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 566987464}
+  - {fileID: 671769918}
   - {fileID: 1361238212}
   - {fileID: 371035186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1007525512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 365507711171570195, guid: c24f11aa1bf6b455eae5757922d8ff89, type: 3}
-  m_PrefabInstance: {fileID: 6009650063654893113}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1007525514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4614623528446010848, guid: c24f11aa1bf6b455eae5757922d8ff89, type: 3}
@@ -846,6 +905,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c24f11aa1bf6b455eae5757922d8ff89, type: 3}
+--- !u!95 &6009650063654893114 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 110311382425591440, guid: c24f11aa1bf6b455eae5757922d8ff89, type: 3}
+  m_PrefabInstance: {fileID: 6009650063654893113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6291630702890487466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -892,6 +956,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578397754807835157, guid: d3fe1c17abedb40d489933d2583e47cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066036410709658730, guid: d3fe1c17abedb40d489933d2583e47cc, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6382131366576515851, guid: d3fe1c17abedb40d489933d2583e47cc, type: 3}
