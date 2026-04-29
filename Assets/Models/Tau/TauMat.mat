@@ -119,10 +119,14 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _CloudsBlend: 1
-    - _CloudsTimeScale: 0.312
-    - _CloudsUvScale: 2.019
-    - _CloudsWarpStrengh: 0.096
+    - _CloudColorFeather: 1.65
+    - _CloudColorOffset: 0.651
+    - _CloudsBlend: 1.597
+    - _CloudsTimeScale: 0.0086
+    - _CloudsUvScale: 1.15
+    - _CloudsWarpStrengh: 0.01
+    - _CloudsWarpStrengh1: 0.028
+    - _CloudsWarpStrengh2: 0.419
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -134,16 +138,18 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LandTimeScale: 0.016
-    - _LandUvScale: 0.6
-    - _LandWarpStrengh: 0.0216
+    - _LandColorFeather: 1.669
+    - _LandColorOffset: 0.863
+    - _LandTimeScale: 0.0204
+    - _LandUvScale: 1
+    - _LandWarpStrengh: 0.0362
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimPower: 11.94
+    - _RimPower: 10.77
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -156,9 +162,12 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CloudColor: {r: 0.99999994, g: 0.99528295, b: 0.99528295, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0.9211261, g: 2.297397, b: 0, a: 1}
+    - _LandColorA: {r: 0.1254902, g: 1, b: 0, a: 1}
+    - _LandColorB: {r: 1, g: 0.3490196, b: 0, a: 1}
+    - _RimColor: {r: 0, g: 5.656854, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -5,6 +5,9 @@ using UnityEngine.Timeline;
 
 namespace WebXRTheater
 {
+    /// <summary>
+    /// Seek and play the timeline at the time of the signal.
+    /// </summary>
     [RequireComponent(typeof(PlayableDirector))]
     public sealed class TimelineSignalController : MonoBehaviour
     {
