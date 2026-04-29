@@ -2,6 +2,8 @@
 
 A prototype for a WebXR using Unity.
 
+https://asus4.github.io/WebXRTheater/
+
 https://github.com/user-attachments/assets/63802f85-6eb0-4d0a-8a27-f0a29f32910b
 
 ## Tested device
