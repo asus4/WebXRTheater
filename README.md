@@ -1,6 +1,12 @@
-# Hail Mary XR
+# Unity x WebXR Experiment
 
 A prototype for a WebXR using Unity.
+
+https://github.com/user-attachments/assets/63802f85-6eb0-4d0a-8a27-f0a29f32910b
+
+## Tested device
+
+- Meta Quest 3: The OS default Browser
 
 ## How to develop
 
