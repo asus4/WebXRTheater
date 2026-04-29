@@ -1,0 +1,44 @@
+name: Deploy Release to Pages
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to deploy'
+        required: true
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download release asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          gh release download "$TAG" \
+            --repo "${{ github.repository }}" \
+            --pattern "*.zip" \
+            --dir ./release
+
+      - name: Extract zip
+        run: |
+          mkdir -p ./site
+          unzip ./release/*.zip -d ./site
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

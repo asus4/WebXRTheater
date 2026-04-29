@@ -1,5 +1,6 @@
 {
     "scripts": {
-        "serve": "node Scripts/serve-unity-webgl.js Build/WebXR 8080"
+        "serve": "node Scripts/serve-unity-webgl.js Build/WebXR 8080",
+        "package": "cd Build/WebXR && zip -r ../../build.zip ."
     }
 }
