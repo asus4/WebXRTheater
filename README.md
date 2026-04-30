@@ -6,6 +6,10 @@ https://asus4.github.io/WebXRTheater/
 
 https://github.com/user-attachments/assets/63802f85-6eb0-4d0a-8a27-f0a29f32910b
 
+https://github.com/user-attachments/assets/eac3e5d8-5a0b-449d-af76-3a63d130f45a
+
+
+
 ## Tested device
 
 - Meta Quest 3: The OS default Browser
